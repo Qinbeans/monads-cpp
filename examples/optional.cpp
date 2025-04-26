@@ -23,8 +23,7 @@ int main() {
     string input;
     print("Enter a number: ");
     cin >> input;
-    auto [i, b] = pass_fail(input);
-    if (b) {
+    if (auto [i, ok] = pass_fail(input); ok) {
         println("i is {}", *i);
     } else {
         println("i is nullopt");

@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/ryan/Documents/monads-cpp/build",
+  "command": "/usr/bin/c++  -I/home/ryan/Documents/monads-cpp/src/expected.h -I/home/ryan/Documents/monads-cpp/src/future.h -I/home/ryan/Documents/monads-cpp/src/optional.h -I/home/ryan/Documents/monads-cpp/src/variant.h -std=gnu++23 -o CMakeFiles/expected.dir/examples/expected.cpp.o -c /home/ryan/Documents/monads-cpp/examples/expected.cpp",
+  "file": "/home/ryan/Documents/monads-cpp/examples/expected.cpp",
+  "output": "CMakeFiles/expected.dir/examples/expected.cpp.o"
+},
+{
+  "directory": "/home/ryan/Documents/monads-cpp/build",
+  "command": "/usr/bin/c++  -I/home/ryan/Documents/monads-cpp/src/expected.h -I/home/ryan/Documents/monads-cpp/src/future.h -I/home/ryan/Documents/monads-cpp/src/optional.h -I/home/ryan/Documents/monads-cpp/src/variant.h -std=gnu++23 -o CMakeFiles/optional.dir/examples/optional.cpp.o -c /home/ryan/Documents/monads-cpp/examples/optional.cpp",
+  "file": "/home/ryan/Documents/monads-cpp/examples/optional.cpp",
+  "output": "CMakeFiles/optional.dir/examples/optional.cpp.o"
+},
+{
+  "directory": "/home/ryan/Documents/monads-cpp/build",
+  "command": "/usr/bin/c++  -I/home/ryan/Documents/monads-cpp/src/expected.h -I/home/ryan/Documents/monads-cpp/src/future.h -I/home/ryan/Documents/monads-cpp/src/optional.h -I/home/ryan/Documents/monads-cpp/src/variant.h -std=gnu++23 -o CMakeFiles/variant.dir/examples/variant.cpp.o -c /home/ryan/Documents/monads-cpp/examples/variant.cpp",
+  "file": "/home/ryan/Documents/monads-cpp/examples/variant.cpp",
+  "output": "CMakeFiles/variant.dir/examples/variant.cpp.o"
+},
+{
+  "directory": "/home/ryan/Documents/monads-cpp/build",
+  "command": "/usr/bin/c++  -I/home/ryan/Documents/monads-cpp/src/expected.h -I/home/ryan/Documents/monads-cpp/src/future.h -I/home/ryan/Documents/monads-cpp/src/optional.h -I/home/ryan/Documents/monads-cpp/src/variant.h -std=gnu++23 -o CMakeFiles/future.dir/examples/future.cpp.o -c /home/ryan/Documents/monads-cpp/examples/future.cpp",
+  "file": "/home/ryan/Documents/monads-cpp/examples/future.cpp",
+  "output": "CMakeFiles/future.dir/examples/future.cpp.o"
+}
+]

@@ -5,17 +5,24 @@ project(monads)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # if on macos, use llvm
 if(APPLE)
-    set(CMAKE_CXX_COMPILER "/opt/homebrew/opt/llvm/bin/clang++")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
-    link_libraries(c++ c++abi) # explicitly link libc++
+  set(CMAKE_CXX_COMPILER "/opt/homebrew/opt/llvm/bin/clang++")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+  link_libraries(c++ c++abi) # explicitly link libc++
 
-    include_directories("/opt/homebrew/opt/llvm@20/include/c++/include")
-    link_libraries("/opt/homebrew/opt/llvm/lib/c++/libc++.a")
+  include_directories("/opt/homebrew/opt/llvm@20/include/c++/include")
+  link_libraries("/opt/homebrew/opt/llvm/lib/c++/libc++.a")
 
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -L/opt/homebrew/opt/llvm/lib/c++ -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++")
+  set(CMAKE_EXE_LINKER_FLAGS
+    "${CMAKE_EXE_LINKER_FLAGS}
+    -L/opt/homebrew/opt/llvm/lib/c++ -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++"
+  )
+endif()
+if(UNIX)
+  set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 endif()
 
 # include all .h files in src
@@ -23,6 +30,7 @@ file(GLOB_RECURSE HEADERS src/*.h)
 include_directories(${HEADERS})
 
 # example usage
+# add executable into bin
 add_executable(expected examples/expected.cpp)
 add_executable(optional examples/optional.cpp)
 add_executable(variant examples/variant.cpp)

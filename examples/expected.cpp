@@ -25,10 +25,8 @@ int main() {
     cin >> input;
     auto [val, error] = pass_fail(input);
     if (auto [err_val, ok] = error; ok) {
-        println("Error");
         println("{}", *err_val);
     } else if (auto [val_val, ok] = val; ok) {
-        println("Value");
         println("{}", *val_val);
     }
 }
